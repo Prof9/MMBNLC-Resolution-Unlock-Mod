@@ -108,7 +108,7 @@ if defined DO_UNINSTALL (
 )
 if defined DO_INSTALL (
 	if exist "!VOL1_DIR!" (
-		if exist "!BUILD_DIR!" (
+		if exist "!BUILD_MOD_DIR!" (
 			echo Installing for Volume 1...
 
 			echo Copying mod folder...
@@ -117,7 +117,7 @@ if defined DO_INSTALL (
 			) else (
 				mkdir "!INSTALL_DIR_VOL1!" 1> nul || goto :error
 			)
-			robocopy /E "!BUILD_DIR!" "!INSTALL_DIR_VOL1!" 1> nul
+			robocopy /E "!BUILD_MOD_DIR!" "!INSTALL_DIR_VOL1!" 1> nul
 			if errorlevel 8 goto :error
 		) else (
 			echo Volume 1 not built; skipping...
@@ -126,7 +126,7 @@ if defined DO_INSTALL (
 		echo Volume 1 not installed; skipping...
 	)
 	if exist "!VOL2_DIR!" (
-		if exist "!BUILD_DIR!" (
+		if exist "!BUILD_MOD_DIR!" (
 			echo Installing for Volume 2...
 
 			echo Copying mod folder...
@@ -135,7 +135,7 @@ if defined DO_INSTALL (
 			) else (
 				mkdir "!INSTALL_DIR_VOL2!" 1> nul || goto :error
 			)
-			robocopy /E "!BUILD_DIR!" "!INSTALL_DIR_VOL2!" 1> nul
+			robocopy /E "!BUILD_MOD_DIR!" "!INSTALL_DIR_VOL2!" 1> nul
 			if errorlevel 8 goto :error
 		) else (
 			echo Volume 2 not built; skipping...
