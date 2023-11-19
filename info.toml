@@ -1,0 +1,7 @@
+title = "Resolution Unlock"
+version = "1.0.0"
+authors = [ "Prof. 9" ]
+unsafe = true
+url = "https://forums.therockmanexezone.com/mmbnlc-pc-resolution-unlock-mod-t16770.html"
+requires_loader_version = ">=0.11.0"
+requires_game = ["Vol1", "Vol2"]
